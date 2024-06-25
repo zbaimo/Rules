@@ -1,0 +1,24 @@
+PayGO
+- DOMAIN-KEYWORD,ultramobile,Proxies
+Openai
+- DOMAIN-KEYWORD,openai,Proxies
+- DOMAIN-KEYWORD,chatgpt,Proxies
+Twitch
+- DOMAIN-KEYWORD,twitch,Proxies
+- DOMAIN-KEYWORD,ttvnw,Proxies
+GitHub
+- DOMAIN-KEYWORD,github,Proxies 
+X
+- DOMAIN-KEYWORD,twimg,Proxies 
+- DOMAIN-SUFFIX,x.com,Proxies 
+- DOMAIN-SUFFIX,twitter.com,Proxies 
+Meta
+- DOMAIN-SUFFIX,facebook.com,Proxies 
+- DOMAIN-KEYWORD,fbcdn,Proxies 
+- DOMAIN-KEYWORD,instagram,Proxies 
+Google
+- DOMAIN-KEYWORD,google,Proxies
+- DOMAIN-KEYWORD,youtube,Proxies 
+Apple
+- DOMAIN-KEYWORD,apple.com.cn,DIRECT 
+- DOMAIN-KEYWORD,apple.com,Proxies 
