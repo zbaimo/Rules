@@ -20,5 +20,5 @@ DOMAIN-KEYWORD,instagram
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,youtube
 #Apple
-DOMAIN-KEYWORD,apple.com
-DOMAIN-KEYWORD,icloud.com
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,icloud.com
