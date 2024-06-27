@@ -3,7 +3,6 @@ DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,icloud.com.cn
 # Alibaba
 DOMAIN-SUFFIX,taobao.com
-DOMAIN-SUFFIX,alicdn.com
 DOMAIN-KEYWORD,aliapp
 DOMAIN-KEYWORD,aliyun
 DOMAIN-KEYWORD,alicdn
