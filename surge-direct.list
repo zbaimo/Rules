@@ -11,6 +11,12 @@ DOMAIN-SUFFIX,baidu.com
 DOMAIN-SUFFIX,baidubcr.com
 DOMAIN-SUFFIX,bdstatic.com
 DOMAIN-SUFFIX,yunjiasu-cdn.net
+#douyin
+DOMAIN-KEYWORD,douyin
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,ecombdapi.com
+DOMAIN-SUFFIX,zijieapi.com
+DOMAIN-SUFFIX,bytegecko.com
 # Accelerate most visited sites
 DOMAIN,blzddist1-a.akamaihd.net
 DOMAIN,cdn.angruo.com
@@ -103,7 +109,6 @@ DOMAIN-SUFFIX,docschina.org
 DOMAIN-SUFFIX,douban.com
 DOMAIN-SUFFIX,doubanio.com
 DOMAIN-SUFFIX,douyu.com
-DOMAIN-KEYWORD,douyin
 DOMAIN-SUFFIX,duokan.com
 DOMAIN-SUFFIX,dxycdn.com
 DOMAIN-SUFFIX,dytt8.net
