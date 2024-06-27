@@ -1,14 +1,17 @@
-# Baidu/iqiyi
-DOMAIN-SUFFIX,baidu.com
-DOMAIN-SUFFIX,baidubcr.com
-DOMAIN-SUFFIX,bdstatic.com
-DOMAIN-SUFFIX,yunjiasu-cdn.net
+#Apple
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,icloud.com.cn
 # Alibaba
 DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-KEYWORD,aliapp
 DOMAIN-KEYWORD,aliyun
 DOMAIN-KEYWORD,alicdn
+# Baidu/iqiyi
+DOMAIN-SUFFIX,baidu.com
+DOMAIN-SUFFIX,baidubcr.com
+DOMAIN-SUFFIX,bdstatic.com
+DOMAIN-SUFFIX,yunjiasu-cdn.net
 # Accelerate most visited sites
 DOMAIN,blzddist1-a.akamaihd.net
 DOMAIN,cdn.angruo.com
