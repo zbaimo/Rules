@@ -3,7 +3,7 @@ DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,icloud.com
 #Openai
 DOMAIN-KEYWORD,openai
-DOMAIN-KEYWORD,
+DOMAIN-KEYWORD,chatgpt
 #PayGO
 DOMAIN-KEYWORD,ultramobile
 DOMAIN-KEYWORD,paygo
