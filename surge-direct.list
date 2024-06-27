@@ -17,6 +17,10 @@ DOMAIN-SUFFIX,amemv.com
 DOMAIN-SUFFIX,ecombdapi.com
 DOMAIN-SUFFIX,zijieapi.com
 DOMAIN-SUFFIX,bytegecko.com
+#ximalaya
+DOMAIN-SUFFIX,ximalaya.com
+DOMAIN-SUFFIX,xmcdn.com
+DOMAIN-SUFFIX,umeng.com
 # Accelerate most visited sites
 DOMAIN,blzddist1-a.akamaihd.net
 DOMAIN,cdn.angruo.com
@@ -334,9 +338,7 @@ DOMAIN-SUFFIX,xiami.net
 DOMAIN-SUFFIX,xiaomi.com
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,xhscdn.com
-DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xinhuanet.com
-DOMAIN-SUFFIX,xmcdn.com
 DOMAIN-SUFFIX,yangkeduo.com
 DOMAIN-SUFFIX,ydstatic.com
 DOMAIN-SUFFIX,youku.com
