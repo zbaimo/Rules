@@ -28,6 +28,8 @@ DOMAIN-SUFFIX,bytegecko.com
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 DOMAIN-SUFFIX,umeng.com
+#pinduoduo
+DOMAIN-SUFFIX,pinduoduo.com
 # Accelerate most visited sites
 DOMAIN,blzddist1-a.akamaihd.net
 DOMAIN,cdn.angruo.com
