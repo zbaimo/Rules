@@ -1,6 +1,6 @@
 #Apple
-DOMAIN-SUFFIX,apple.com.cn
-DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN-KEYWORD,apple
+DOMAIN-KEYWORD,icloud
 # Alibaba
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-KEYWORD,alibaba
