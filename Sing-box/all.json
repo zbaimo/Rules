@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_keyword": [
+        "bilibil",
+        "qq",
+        "biliapi",
+        "iqiyi",
+        "toutiao",
+        "youku",
+        "umeng",
+        "ali",
+        "taobao",
+        "apple",
+        "icloud",
+        "163",
+        "outlook",
+        "ximalaya",
+        "xmcdn",
+        "baidu",
+        "189",
+        "pdd",
+        "dewu"
+      ]
+    }
+  ]
+}
