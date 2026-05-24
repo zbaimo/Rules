@@ -1,0 +1,79 @@
+name: Convert Rules to SmartDNS
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'  # 每周一凌晨3点
+  workflow_dispatch:       # 支持手动触发
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install sing-box (用于解析 .srs)
+        run: |
+          wget -qO sing-box.tar.gz \
+            https://github.com/SagerNet/sing-box/releases/download/v1.9.0/sing-box-1.9.0-linux-amd64.tar.gz
+          tar -xzf sing-box.tar.gz
+          sudo mv sing-box-*/sing-box /usr/local/bin/
+          sing-box version
+
+      - name: Download rule sets
+        run: |
+          mkdir -p rules_raw
+          # 国内
+          curl -fsSL "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/cn.srs" \
+            -o rules_raw/cn.srs
+          curl -fsSL "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/category-ads-all.srs" \
+            -o rules_raw/ads.srs
+          # 国外
+          curl -fsSL "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/geolocation-!cn.srs" \
+            -o rules_raw/foreign.srs
+
+      - name: Convert srs to domain lists
+        run: |
+          mkdir -p smartdns
+
+          # 转换函数：srs → 域名列表
+          convert() {
+            local SRS=$1
+            local OUT=$2
+            sing-box rule-set decompile --type binary "$SRS" \
+              | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          for rule in data.get('rules', []):
+              for d in rule.get('domain_suffix', []):
+                  print(d.lstrip('.'))
+              for d in rule.get('domain', []):
+                  print(d.lstrip('.'))
+          " >> "$OUT" 2>/dev/null || true
+          }
+
+          # 国内
+          > smartdns/china-domains.txt
+          convert rules_raw/cn.srs smartdns/china-domains.txt
+          sort -u smartdns/china-domains.txt -o smartdns/china-domains.txt
+          echo "国内域名: $(wc -l < smartdns/china-domains.txt) 条"
+
+          # 广告（加入国内，smartdns 返回空） 
+          > smartdns/ads-domains.txt
+          convert rules_raw/ads.srs smartdns/ads-domains.txt
+          sort -u smartdns/ads-domains.txt -o smartdns/ads-domains.txt
+          echo "广告域名: $(wc -l < smartdns/ads-domains.txt) 条"
+
+          # 国外
+          > smartdns/foreign-domains.txt
+          convert rules_raw/foreign.srs smartdns/foreign-domains.txt
+          sort -u smartdns/foreign-domains.txt -o smartdns/foreign-domains.txt
+          echo "国外域名: $(wc -l < smartdns/foreign-domains.txt) 条"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add smartdns/
+          git diff --cached --quiet || git commit -m "Auto update smartdns rules $(date -u '+%Y-%m-%d %H:%M')"
+          git push
