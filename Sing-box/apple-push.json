@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": "push.apple.com",
+      "domain_suffix": "gateway.push.apple.com",
+      "domain_suffix": "api.push.apple.com",
+      "domain_suffix": "sandbox.push.apple.com"
+    }
+  ]
+}
