@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": "bybit.com",
+      "domain_suffix": "bytick.com",
+      "domain_suffix": "bybit.biz",
+      "domain_suffix": "bybit-global.com",
+      "domain_suffix": "bybit.cloud",
+      "domain_suffix": "bybitglobal.com"
+    }
+  ]
+}
