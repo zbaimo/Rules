@@ -1,6 +1,2 @@
-a.dm
+k.gl
 k.vc
-lf.cm
-o.gwhd
-w.oo
-w.so
